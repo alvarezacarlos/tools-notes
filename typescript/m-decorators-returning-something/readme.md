@@ -1,0 +1,1 @@
+we can return on all the decorators but typescript will oly respect will only respect and use the return when we have decorators on class, methods and accessors. properties and parameters decorators can also return something but typescript will not use it.
