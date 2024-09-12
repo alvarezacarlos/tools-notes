@@ -1,0 +1,9 @@
+-Valor Global (V): Cuando se utiliza "this" fuera de cualquier función, hace referencia al objeto global, que en un navegador sería "window" y en Node.js sería "global". Por ejemplo, si tienes un archivo JavaScript que no está dentro de ninguna función, "this" se refiere al objeto global.
+-Invocación Implícita (I): Cuando una función es invocada como un método de un objeto, "this" hace referencia al objeto que contiene la función. Por ejemplo, si tienes un objeto "persona" con un método "saludar", dentro del método "saludar", "this" se refiere al objeto "persona".
+-Contexto Explicito: Llamada a través de "apply" o "call" (C): Cuando se utiliza el método "apply" o "call" para invocar una función, se puede especificar explícitamente el valor de "this". Estos métodos permiten cambiar el contexto de "this" dentro de la función. Por ejemplo, puedes llamar a una función y especificar que "this" debe ser un objeto particular en lugar del objeto por defecto.
+-Invocación de Constructor (C): Cuando se utiliza la palabra clave "new" para crear una instancia de un objeto a partir de un constructor, "this" hace referencia a la instancia recién creada. Los constructores son funciones especiales utilizadas para crear objetos. Dentro de un constructor, "this" se refiere a la instancia del objeto que está siendo creado.
+
+
+---las funciones flechas no tienen contexto implicito de this, this siempre hara referencia al contexto global.
+--- solo las funciones expresadas y nombradas tienen contexto implicito de this.
+-- solo las funciones expresadas y nombradas pueden ser llamadas con metodos como apply o call para poder pasar explicitamente el contexto.
