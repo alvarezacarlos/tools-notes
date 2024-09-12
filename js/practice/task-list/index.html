@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Web</title>
+    <link rel="stylesheet" href="main.css" type="text/css"></link>
+    
+</head>
+<body>
+
+    <template id="login-temp">
+        <div class="form-main">
+            <p class="form-title">Inicia Sesión</p>
+            <form id="login-form" class="login-form" action="">
+                <div>
+                    <p>Nombre de Usuario</p>
+                    <input id="email" placeholder="Email">
+                </div>
+                <div>
+                    <p>Contraseña</p>
+                    <input id="password" placeholder="Contraseña">
+                </div>
+                <div>
+                    <button class="btn">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </template>
+
+    <template id="order-temp">
+        <div id="orders-cont">
+            <div id="meals">
+                <ul id="meals-list">
+                    <p>Cargando...</p>
+                </ul>
+               <div id="form-cont">
+                    <form id="order" action="">
+                        <input id="clickedMealId" type="hidden" />
+                        <button id="submit" disabled>Enviar</button>
+                        
+                    </form>
+               </div>
+            </div>
+        
+            <div id="orders">
+                <ul id="orders-list">
+                    <p>Cargando...</p>
+                </ul>
+            </div>
+        
+            <template id="single-item">
+                <li>
+                    <p></p>
+                </li>
+            </template>
+
+        </div>
+    </template>
+    <div id="app">
+        <p>Loading...</p>
+    </div>
+</body>
+<script src="main.js"></script>
+</html> 

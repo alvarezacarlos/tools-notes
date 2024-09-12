@@ -1,0 +1,49 @@
+<html>
+  <body>
+    <form action="">
+      <input type="button" name="trigger" id="trigger" value="Call a function using the Event Context"/>
+      <input type="button" name="trigger2" id="trigger2" value="Call a function using bind to bind another oject"/>      
+    </form>
+    <script language="javascript" type="text/javascript">
+      function lala() {
+        console.log(this);
+      }
+
+      
+      // window.onload = lala()
+      // En esta línea, se esta llamando a la función lala() inmediatamente y asignando su resultado (undefined) a window.onload. En su lugar, debes asignar la función lala misma, sin llamarla.
+
+      window.onload = lala
+
+      const person = {
+        sayHi: function lele() {
+          console.log('runing lele...')
+          console.log(this) //en el contexto del evento.
+          // console.log(this.sayHi())
+        }
+      }      
+
+      bttn = document.querySelector('#trigger')
+
+      // bttn.addEventListener('click', () => person.sayHi())
+      bttn.addEventListener('click', person.sayHi) //en el contexto del evento.
+
+      //maneras de llamar this
+      /*
+        **** En el contexto del evento.
+        cuando se llama this en el evento el valor de this se establece en el objeto en el cual se disparo el event. Esto es una caracteristica de Javascript que se llama contexto de ejeucion o contexto de llamada.
+      */
+     /*
+      **** bind() para establecer el contexto
+      bind nos permite enlazar explicitamente el valor de this al objeto a un objeto en particular. Asi le decimo a Javascript que cuando se ejecute una funcion que utiliza this internamente el valor de this apunte a la referencia de un objeto especifico y no a la referencia del objecto desde donde se dispara el evento.
+     */
+
+     bttn2 = document.querySelector('#trigger2')
+     bttn2.addEventListener('click', person.sayHi.bind(person)) //en el contexto del evento.
+
+
+     person.sayHi() //calling the function using the object which it belong to, no need use bind
+
+    </script>
+  </body>
+</html>
