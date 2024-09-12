@@ -1,0 +1,22 @@
+Learning AJAX
+JavaScript
+HTML
+CSS
+DOM
+BOM
+Navigator APIs
+React
+Flask
+Python
+React Native
+Nodejs
+Nestjs
+Nextjs
+Redux
+Firebase
+MongoDB
+MySQL
+PostgreSQL
+AWS
+RestFul API
+Typescript
